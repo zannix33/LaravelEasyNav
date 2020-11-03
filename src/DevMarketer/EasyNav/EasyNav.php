@@ -87,10 +87,10 @@ class EasyNav
 	 * @param 	string|NULL		$active
 	 * @return	string
 	 */
-	public function isRoute($route, $active = NULL, $inactive = NULL)
+	public function isRoute($route, $active = NULL)
 	{
 		$this->setActive($active);
-		return ($this->request->routeIs($route) ? $this->active : $inactive);
+		return ($this->request->routeIs($route) ? $this->active : '');
 	}
 
 	/**
